@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Евгений Карпов](https://up.htmlacademy.ru/react/3/user/70583).
-* Наставник: `Неизвестно`.
+* Наставник: [Степан Нарышков](https://htmlacademy.ru/profile/id95962).
 
 ---
 
