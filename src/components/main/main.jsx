@@ -3,18 +3,14 @@ import PropTypes from 'prop-types';
 
 const Main = (props) => {
   const {
-    count
+    offersCount
   } = props;
 
-  return (
-    <>
-      <h1>Объектов: {count}</h1>
-    </>
-  );
+  return <h1>Объектов: {offersCount}</h1>;
 };
 
 Main.propTypes = {
-  count: PropTypes.number.isRequired
+  offersCount: PropTypes.number.isRequired
 };
 
 export default Main;

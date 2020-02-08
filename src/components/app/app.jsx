@@ -12,7 +12,7 @@ class App extends React.PureComponent {
       params
     } = this.props;
 
-    return <Main count={params.offersCount} />;
+    return <Main offersCount={params.offersCount} />;
   }
 }
 
