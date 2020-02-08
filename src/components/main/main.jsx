@@ -1,23 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Main extends React.PureComponent {
-  constructor(props) {
-    super(props);
-  }
+const Main = (props) => {
+  const {
+    count
+  } = props;
 
-  render() {
-    const {
-      count
-    } = this.props;
-
-    return (
-      <>
-        <h1>Объектов: {count}</h1>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <h1>Объектов: {count}</h1>
+    </>
+  );
+};
 
 Main.propTypes = {
   count: PropTypes.number.isRequired
