@@ -12,7 +12,7 @@ class App extends React.PureComponent {
       params
     } = this.props;
 
-    return <Main offers={params.offers} />;
+    return <Main {...params} />;
   }
 }
 
@@ -22,7 +22,10 @@ App.propTypes = {
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       image: PropTypes.string
-    }))
+    })),
+    defaultProps: PropTypes.exact({
+      image: PropTypes.string.isRequired
+    }).isRequired
   })
 };
 
