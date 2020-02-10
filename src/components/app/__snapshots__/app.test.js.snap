@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Should be rendered correctly 1`] = `
+<div
+  className="offers"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <div
+    className="offers__item"
+    style={
+      Object {
+        "width": "30%",
+      }
+    }
+  >
+    <img
+      alt="Little cozy trash can"
+      className="offers__item-img"
+      src="https://cdnmedia.220-volt.ru/content/products/337/337834/images/thumb_220/n1200x800_q80/1.jpeg"
+      style={
+        Object {
+          "maxWidth": "100%",
+        }
+      }
+    />
+    <h4
+      className="offers__item-title"
+      onClick={[Function]}
+    >
+      Little cozy trash can
+    </h4>
+  </div>
+  <div
+    className="offers__item"
+    style={
+      Object {
+        "width": "30%",
+      }
+    }
+  >
+    <img
+      alt="Amazing hotel beach resort"
+      className="offers__item-img"
+      src="https://img1.coastalliving.timeinc.net/sites/default/files/styles/4_3_horizontal_inbody_900x506/public/image/2016/11/main/coastalhotels_0215_09.jpg"
+      style={
+        Object {
+          "maxWidth": "100%",
+        }
+      }
+    />
+    <h4
+      className="offers__item-title"
+      onClick={[Function]}
+    >
+      Amazing hotel beach resort
+    </h4>
+  </div>
+  <div
+    className="offers__item"
+    style={
+      Object {
+        "width": "30%",
+      }
+    }
+  >
+    <img
+      alt="Famous japanese boxes"
+      className="offers__item-img"
+      src="https://dvnak.ru/upload/old/photos/medium/bbe7280e8e0d144e5e7710286e7ccc45.jpg"
+      style={
+        Object {
+          "maxWidth": "100%",
+        }
+      }
+    />
+    <h4
+      className="offers__item-title"
+      onClick={[Function]}
+    >
+      Famous japanese boxes
+    </h4>
+  </div>
+</div>
+`;

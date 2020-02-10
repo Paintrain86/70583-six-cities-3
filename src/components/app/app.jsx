@@ -12,7 +12,14 @@ class App extends React.PureComponent {
       params
     } = this.props;
 
-    return <Main offers={params.offers} />;
+    const onOfferHeadingClick = () => {
+      // console.log(`Clicked on "${evt.target.textContent}"!`);
+    };
+
+    return <Main
+      offers={params.offers}
+      onOfferClick={onOfferHeadingClick}
+    />;
   }
 }
 
