@@ -17,7 +17,7 @@ class App extends React.PureComponent {
     };
 
     return <Main
-      offers={params.offers}
+      {...params}
       onOfferClick={onOfferHeadingClick}
     />;
   }
@@ -29,7 +29,10 @@ App.propTypes = {
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       image: PropTypes.string
-    }))
+    })),
+    defaultProps: PropTypes.exact({
+      image: PropTypes.string.isRequired
+    }).isRequired
   })
 };
 
