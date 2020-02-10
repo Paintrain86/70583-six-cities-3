@@ -5,6 +5,9 @@ import App from './app.jsx';
 describe(`App`, () => {
   it(`Should be rendered correctly`, () => {
     const testSettings = {
+      defaultParams: {
+        image: `https://placehold.it/360x240`
+      },
       offers: [
         {
           id: 1,

@@ -25,14 +25,10 @@ class App extends React.PureComponent {
 
 App.propTypes = {
   params: PropTypes.shape({
-    offers: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      image: PropTypes.string
-    })),
-    defaultProps: PropTypes.exact({
+    defaultParams: PropTypes.exact({
       image: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    offers: PropTypes.array
   })
 };
 

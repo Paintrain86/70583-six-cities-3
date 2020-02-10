@@ -6,8 +6,11 @@ import Main from './main.jsx';
 Enzyme.configure({adapter: new Adapter()});
 
 describe(`Main`, () => {
-  it(`Button should be clickable!`, () => {
+  it(`Headings should be clickable!`, () => {
     const testSettings = {
+      defaultParams: {
+        image: `https://placehold.it/360x240`
+      },
       offers: [
         {
           id: 1,
@@ -30,8 +33,10 @@ describe(`Main`, () => {
 
     const app = shallow(<Main {...testSettings}/>);
 
-    app.find(`.offers__item-title`).forEach((node) => {
-      node.simulate(`click`);
+    app.find(`.place-card__name a`).forEach((node) => {
+      node.simulate(`click`, {
+        preventDefault: () => {}
+      });
     });
 
     expect(testSettings.onOfferClick).toHaveBeenCalledTimes(3);

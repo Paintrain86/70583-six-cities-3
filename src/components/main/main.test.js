@@ -5,6 +5,9 @@ import Main from './main.jsx';
 describe(`Main`, () => {
   it(`Should be rendered correctly`, () => {
     const testSettings = {
+      defaultParams: {
+        image: `https://placehold.it/360x240`
+      },
       offers: [
         {
           id: 1,
@@ -21,8 +24,21 @@ describe(`Main`, () => {
           title: `Famous japanese boxes`,
           image: ``
         }
-      ],
-      onOfferClick: jest.fn()
+      ]
+    };
+
+    const markup = renderer
+      .create(<Main {...testSettings}/>)
+      .toJSON();
+
+    expect(markup).toMatchSnapshot();
+  });
+
+  it(`Should be rendered correctly when no offers`, () => {
+    const testSettings = {
+      defaultParams: {
+        image: `https://placehold.it/360x240`
+      }
     };
 
     const markup = renderer
