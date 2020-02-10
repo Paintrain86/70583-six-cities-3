@@ -3,14 +3,33 @@ import PropTypes from 'prop-types';
 
 const Main = (props) => {
   const {
-    offersCount
+    offers
   } = props;
 
-  return <h1>Объектов: {offersCount}</h1>;
+  const defaultImage = `https://dvnak.ru/upload/old/photos/medium/bbe7280e8e0d144e5e7710286e7ccc45.jpg`;
+
+  return (
+    <>
+      <div className="offers" style={{display: `flex`, flexDirection: `row`, justifyContent: `space-between`}}>
+        {offers.map((offer) => {
+          return (
+            <div className="offers__item" key={offer.id} style={{width: `30%`}}>
+              <img className="offers__item-img" src={(offer.image) ? offer.image : defaultImage} alt={offer.title} style={{maxWidth: `100%`}} />
+              <h4 className="offers__item-title">{offer.title}</h4>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
 };
 
 Main.propTypes = {
-  offersCount: PropTypes.number.isRequired
+  offers: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string
+  }))
 };
 
 export default Main;

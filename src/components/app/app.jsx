@@ -12,13 +12,17 @@ class App extends React.PureComponent {
       params
     } = this.props;
 
-    return <Main offersCount={params.offersCount} />;
+    return <Main offers={params.offers} />;
   }
 }
 
 App.propTypes = {
   params: PropTypes.shape({
-    offersCount: PropTypes.number
+    offers: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      image: PropTypes.string
+    }))
   })
 };
 
