@@ -12,7 +12,15 @@ class App extends React.PureComponent {
       params
     } = this.props;
 
-    return <Main {...params} />;
+    // Function for future state change handling
+    const onOfferHeadingClick = () => {
+      // console.log(`Clicked on "${evt.target.textContent}"!`);
+    };
+
+    return <Main
+      {...params}
+      onOfferClick={onOfferHeadingClick}
+    />;
   }
 }
 
@@ -21,11 +29,9 @@ App.propTypes = {
     offers: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      image: PropTypes.string
-    })),
-    defaultProps: PropTypes.exact({
-      image: PropTypes.string.isRequired
-    }).isRequired
+      image: PropTypes.string,
+      isPremium: PropTypes.bool
+    })).isRequired,
   })
 };
 
