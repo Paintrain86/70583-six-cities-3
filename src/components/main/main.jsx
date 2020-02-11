@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const defaultImage = `https://dvnak.ru/upload/old/photos/medium/bbe7280e8e0d144e5e7710286e7ccc45.jpg`;
+
 const Main = (props) => {
   const {
-    defaultParams,
     offers,
     onOfferClick
   } = props;
@@ -105,7 +106,7 @@ const Main = (props) => {
                         }
                         <div className="cities__image-wrapper place-card__image-wrapper">
                           <a href="#">
-                            <img className="place-card__image" src={(offer.image) ? offer.image : defaultParams.image} width="260" height="200" alt={offer.title} />
+                            <img className="place-card__image" src={(offer.image) ? offer.image : defaultImage} width="260" height="200" alt={offer.title} />
                           </a>
                         </div>
                         <div className="place-card__info">
@@ -159,24 +160,14 @@ const Main = (props) => {
   );
 };
 
-Main.defaultProps = {
-  offers: [],
-  onOfferClick: (evt) => {
-    evt.preventDefault();
-  }
-};
-
 Main.propTypes = {
-  defaultParams: PropTypes.exact({
-    image: PropTypes.string.isRequired
-  }).isRequired,
   offers: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     image: PropTypes.string,
     isPremium: PropTypes.bool
-  })),
-  onOfferClick: PropTypes.func
+  })).isRequired,
+  onOfferClick: PropTypes.func.isRequired
 };
 
 export default Main;

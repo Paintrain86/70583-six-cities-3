@@ -8,9 +8,6 @@ Enzyme.configure({adapter: new Adapter()});
 describe(`Main`, () => {
   it(`Headings should be clickable!`, () => {
     const testSettings = {
-      defaultParams: {
-        image: `https://placehold.it/360x240`
-      },
       offers: [
         {
           id: 1,

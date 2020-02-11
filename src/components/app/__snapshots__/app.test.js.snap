@@ -426,7 +426,7 @@ exports[`App Should be rendered correctly 1`] = `
                     alt="Famous japanese boxes"
                     className="place-card__image"
                     height="200"
-                    src="https://placehold.it/360x240"
+                    src="https://dvnak.ru/upload/old/photos/medium/bbe7280e8e0d144e5e7710286e7ccc45.jpg"
                     width="260"
                   />
                 </a>
