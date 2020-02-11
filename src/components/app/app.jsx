@@ -12,6 +12,7 @@ class App extends React.PureComponent {
       params
     } = this.props;
 
+    // Function for future state change handling
     const onOfferHeadingClick = () => {
       // console.log(`Clicked on "${evt.target.textContent}"!`);
     };
